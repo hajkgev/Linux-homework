@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.0)
 
 project(http-server)
 
+add_executable("${PROJECT_NAME}" source.cpp)
+
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 
 find_package(Threads REQUIRED)
