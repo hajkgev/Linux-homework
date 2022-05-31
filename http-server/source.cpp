@@ -1,4 +1,4 @@
-#include "http_lib/http.h"
+#include "lib/http.h"
 
 struct StaticFile : http::Service {
   std::string content;
@@ -18,10 +18,15 @@ struct StaticFile : http::Service {
 };
 
 struct Upper : http::Service {
- 
+  http::Response doService(const http::Request &req) override {
+    
+    }
+
+    return response;
   }
 };
 
 int main(int argc, char *argv[]) {
-  
+  http::Server server;
+  StaticFile file("Hello, World!\n");
 }
